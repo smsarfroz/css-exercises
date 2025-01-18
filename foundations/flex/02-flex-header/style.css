@@ -1,6 +1,35 @@
+/* 
+class header 
+  class left-links
+    ul 
+      ONE
+      TWO
+      THREE
+  class logo 
+  class right-links
+    ul 
+      FOUR
+      FIVE
+      SIX
+
+ why is there so much left margin for the first ul items ? 
+ how to remove it ?
+ where is it coming from ? 
+
+ what's the difference between applying padding to header vs applying padding to specifically the logo ?
+ applying padding to header will result into its inner elements moving with respect to it.
+
+  now what ? 
+
+ */
 .header  {
-  font-family: monospace;
+  font-family:serif;
   background: papayawhip;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  font-weight:800;
+  padding: 8px;
 }
 
 .logo {
@@ -14,6 +43,10 @@
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  gap: 8px;
 }
 
 a {
@@ -22,4 +55,6 @@ a {
   padding: 8px;
   /* this removes the line under the links */
   text-decoration: none;
+  color: blue;
+  /* margin: 8px; */
 }
