@@ -7,21 +7,49 @@ body {
   width: 400px;
   background: #fff;
   margin: 16px auto;
+  padding: 8px;
+  /* padding-bottom: 2px; //extra */
 }
 
+/* 
+I want to move this title a bit downwards with respect 
+to card.
+How to do that ? 
+By increasing top margin, it moves downwards with 
+respect to outer box.
+how to move it wrt to inner one ? 
+inside card there is title
+inside a class , there is another class
+how to margin this inner class with respect to outer class ?  
+ 
+How do I bring down the big button on new line and 
+centered ? 
+
+ */
 .title {
+  font-size: 16px;
   background: #e3f4ff;
+  padding: 8px;
+  margin-bottom: 8px;
 }
 
 .content {
   background: #e3f4ff;
+  padding: 16px 8px;
+  margin-bottom: 8px;
 }
 
 .button-container {
   background: #e3f4ff;
+  /* margin-bottom: 8px; */
+  text-align: center;
+  padding: 8px;
 }
 
 button {
   background: white;
   border: 1px solid #eee;
+  display: block;
+  margin: 0 auto;
+  padding: 8px 24px;
 }
