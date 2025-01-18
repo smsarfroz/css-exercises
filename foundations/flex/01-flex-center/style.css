@@ -1,8 +1,15 @@
+/*  
+How to center the box inside the container ? 
+should I just justify content center and align items center ? 
+*/
 .container {
   background: dodgerblue;
   border: 4px solid midnightblue;
   width: 400px;
   height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box {
@@ -13,3 +20,4 @@
   width: 80px;
   height: 80px;
 }
+
