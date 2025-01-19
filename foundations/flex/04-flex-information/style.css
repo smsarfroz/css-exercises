@@ -1,3 +1,35 @@
+/* 
+class title 
+  img 
+  class text 
+
+  img 
+  class text 
+
+  img 
+  class text 
+
+  img 
+  class text 
+
+What do we do ?
+I need that title to be in middle 
+should I wrap img, class text in a div or something ? 
+then manipulate it or flex it as I want ? 
+between contents, there is same space and for corner content there is a larger space between it and the edge.
+How could this be done ? 
+then the text that could overflow just adjusts itself so that it remains inside the content box.
+how to do that ? there was a way around, right ?
+do I need flex here ? 
+maybe, justify-content: space_around? 
+
+is the text inside the box aligned vertically ? 
+can I let the box as flex 
+align-items: center ?
+
+text is adjusting itself vertically 
+so if I give enough margin to the boxes then the text will adjust
+ */
 body {
   font-family: 'Courier New', Courier, monospace;
 }
@@ -10,17 +42,21 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  /* margin: 0 auto; */
+  text-align: center;
+  margin-bottom: 32px;
 }
 
-/* do not edit this footer */
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 52px;
+.container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  background: #eee;
+  gap: 52px;
+}
+
+.box {
+  max-width: 200px;
+}
+
+.text {
+  text-align: center;
 }
