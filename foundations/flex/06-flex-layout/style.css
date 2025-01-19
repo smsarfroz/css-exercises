@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* 
+that middle object is exactly on middle, how to get that ? 
+what's its container ? 
 
+how to adjust header part ? 
+about, store 
+ */
 body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -16,6 +25,8 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+
+  padding: 8px 16px;
 }
 
 input {
@@ -23,4 +34,57 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  flex-grow: 1;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.header {
+  display: flex;
+  padding: 8px 16px;
+
+  justify-content: space-between;
+}
+
+.footer {
+  display: flex;
+  margin-top: auto;
+  background-color: #eeeeee;
+  padding: 8px 16px;
+
+  justify-content: space-between;
+}
+
+ul{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+}
+/* 
+.left-links {
+  margin-right: auto;
+  display: flex;
+  gap: 16px;
+}
+
+.right-links {
+  display: flex;
+  gap: 16px;
+} */
+
+a{
+  text-decoration: none;
+  color: grey;
 }
