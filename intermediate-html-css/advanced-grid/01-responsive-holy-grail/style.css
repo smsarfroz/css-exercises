@@ -1,3 +1,23 @@
+/* 
+How do make this holy grail responsive ? 
+we're supposed to add dynamic track sizes for columns and rows.
+what are ways of adding dynamic tracks ? 
+
+fr 
+minmax()
+autofit 
+
+which one should I ues ? I want it responsive. in rows and column.
+whaddoado
+we define that in grid template row column
+but how ? 
+I could use fr ? 
+grid-template-column: 1fr 3fr; 
+grid-template-row: 100px 100px 500px 100px 
+
+grid-template-row: 1fr 1fr 5fr 1fr;
+*/
+
 body,
 html {
   height: 100%;
@@ -9,6 +29,11 @@ html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr 5fr 1fr;
+  gap: 15px;
 }
 
 .container div {
