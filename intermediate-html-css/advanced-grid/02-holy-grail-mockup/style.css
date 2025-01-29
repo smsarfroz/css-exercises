@@ -1,10 +1,59 @@
+/* 
+class container 
+	class header 
+		class logo 
+		class menu 
+			ul 
+				li
+	class sidebar 
+		class photo 
+			p
+		class side-content 
+		class side-content
+		class side-content 
+
+	class nav
+		ul 
+			li 
+
+	class article 
+		class card 
+			p class title
+ 			p
+
+	class footer  
+
+if I make the header a grid container. 
+make 6 columns ? of some definite size ? second column will be blank ? how ?
+
+or should I first make the class container the outermost grid container ? yes
+3 rows , 5 columns 
+
+footer is also a grid item 
+4 rows , 5 columns 
+
+let's create header part 
+again make a grid ? 
+
+5 rows have been created, there must be something wrong 
+
+*/
 * {
   margin: 0;
   padding: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .container {
   text-align: center;
+
+  display: grid;
+  grid-template-rows: 2fr 1fr 16fr 1fr;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  gap: 5px;
 }
 
 .container div {
@@ -17,8 +66,23 @@
 
 .header {
   background-color: #393f4d;
+
+  grid-column: 1/6;
+  
+  display: grid;
+  grid-template-columns: 1fr 2fr 4fr;
+  /* grid-area: "logo . menu"; */
+  align-items: center;
 }
 
+.menu {
+  grid-column: 3/4;
+}
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 20px;
+}
 .menu ul,
 .menu li {
   font-size: 16px;
@@ -26,8 +90,19 @@
 
 .sidebar {
   background-color: #C50208;
+
+  grid-row: 2/4;
+
+  display: grid;
+  gap: 30px;
+
 }
 
+.photo , .side-content {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
 .sidebar .photo {
   background-color: white;
   color: black;
@@ -46,8 +121,17 @@
 
 .nav {
   background-color: #C50208;
+
+  grid-column: 2/6;
+  display: grid;
+  align-items: center;
 }
 
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+}
 .nav ul li {
   font-size: 16px;
   text-transform: uppercase;
@@ -55,6 +139,14 @@
 
 .article {
   background-color: #bccbde;
+
+  grid-column: 2/6;
+  grid-row: 3/4;
+
+  display: grid;
+  gap: 15px;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .article p {
@@ -70,10 +162,17 @@
   text-align: center;
 }
 
+.card {
+
+  display: grid;
+
+  height: 200px;
+}
 .card p {
   color: black;
   font-weight: normal;
   font-size: 14px;
+
 }
 
 .card .title {
@@ -83,6 +182,8 @@
 
 .footer {
   background-color: #393f4d;
+
+  grid-column: 1/6;
 }
 
 .footer p {
